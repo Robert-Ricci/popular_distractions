@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import BlogForm from '../componetns/blogForm';
+import BlogForm from './BlogForm';
 
-class blogContainer extends Component {
+class BlogContainer extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ class blogContainer extends Component {
     }
 }
 
-export default blogContainer;
+export default BlogContainer;
