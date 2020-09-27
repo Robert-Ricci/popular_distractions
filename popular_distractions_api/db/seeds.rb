@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Blog.create(author:'Robert Ricci', content:'This is a test post, to test that the posts are testing', date:'9/26/2020' )
+Blog.create(author:'Robert Ricci', title:"Test", content:'This is a test post, to test that the posts are testing', date:'9/26/2020' )

@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_143600) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "author"
+    t.string "title"
     t.string "content"
     t.string "date"
     t.datetime "created_at", precision: 6, null: false
