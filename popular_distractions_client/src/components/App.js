@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogContainer from './BlogContainer';
+import BlogContainer from './BlogContainer.js';
 
 const App = () => {
     return (

@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
 
 class BlogForm extends Component {
     render() {
         return (
             <div>
-                form
+                <form>
+                    <label>Name:</label>
+                    <input type='text' value={this.props.name} onChange={this.handleChange} name='name'></input>
+                    <label>Titlel:</label>
+                    <input type='text' value={this.props.title} onChange={this.handleChange} name='title'></input>
+                    <label>Content:</label>
+                    <textarea  type='text' value={this.props.content} onChange={this.handleChange} name='content'></textarea>
+                </form>
             </div>
         );
     }
 }
 
-export default connect(null) (BlogForm);
+export default BlogForm;

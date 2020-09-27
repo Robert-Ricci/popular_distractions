@@ -1,11 +1,8 @@
-export const blogsReducer = (state = [], action) => {
+export const usersReducer = (state = [], action) =>{
     switch(action.type) {
-        case 'FETCH_BLOGS':
+        case 'FETCH_USERS':
             return action.payload
             default:
                 return state
     }
 }
-
-
-
