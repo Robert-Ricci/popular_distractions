@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { addBlogs }from '../actions/blogActions.js';
+import { addBlog } from '../actions/blogActions';
 
 class BlogForm extends Component {
    
@@ -12,8 +12,8 @@ class BlogForm extends Component {
         date: ''
     }
 
-    handleSubmit= e => {
-        const {name, value} = e.target
+    handleChange = e => {
+        const { name, value } = e.target
         this.setState({
             [name]:value
         })
@@ -21,31 +21,31 @@ class BlogForm extends Component {
 
    handleSubmit = e =>{
     e.prevent.default()
-    this.props.addBlogs(state)
+    // this.props.addBlog(state)
    }
    
 
     render() {
         return (
             
-                <form onSubmit={this.handleSubmit}>
-                    <label>Name:</label>
-                    <input type='text' value={this.props.name} onChange={this.handleChange} name='name'></input>
+                <form onSubmit={event =>this.handleSubmit(event)}>
+                    <label>Author Name:</label>
+                    <input type='text' value={this.state.author} onChange={event => this.handleChange(event)} name='author' />
                     <br />
 
-                    <label>Titlel:</label>
-                    <input type='text' value={this.props.title} onChange={this.handleChange} name='title'></input>
+                    <label>Title:</label>
+                    <input type='text' value={this.state.title} onChange={event => this.handleChange(event)} name='title' />
                     <br />
 
                     <label>Content:</label>
-                    <textarea  type='text' value={this.props.content} onChange={this.handleChange} name='content'></textarea>
+                    <input type='text' value={this.state.content} onChange={event => this.handleChange(event)} name='content' />
                     <br/>
 
-                    <input type="submit"></input>
+                    <input type="submit"  value="submit" />
                 </form>
             
         );
     }
 }
 
-export default connect(null, {addBlogs})(BlogForm);
+export default connect(null, {addBlog})(BlogForm);
