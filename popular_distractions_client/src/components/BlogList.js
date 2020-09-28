@@ -10,9 +10,7 @@ const BlogList = ({ blogs }) => {
                         {blog.title}
                     </li>
                 </ul>
-            }
-
-            )}
+            })}
         </div>
     );
 };

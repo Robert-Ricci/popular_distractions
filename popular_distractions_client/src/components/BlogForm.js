@@ -38,7 +38,7 @@ class BlogForm extends Component {
                     <br />
 
                     <label>Content:</label>
-                    <input type='text' value={this.state.content} onChange={event => this.handleChange(event)} name='content' />
+                    <textarea type='text' value={this.state.content} onChange={event => this.handleChange(event)} name='content' />
                     <br/>
 
                     <input type="submit"  value="submit" />
