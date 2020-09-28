@@ -4,8 +4,14 @@ import { connect } from 'react-redux';
 const BlogList = ({ blogs }) => {
     return (
         <div>
-            
-           list
+            list
+            {blogs.map((blog, index) => {
+                <ul>
+                    <li key={index}>
+                        {blog.title}-{blog.author}
+                    </li>
+                </ul>
+            })}
         </div>
     );
 };
