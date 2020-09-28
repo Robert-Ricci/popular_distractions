@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import BlogList from './BlogList';
 import Home from './Home';
+import BlogForm from './BlogForm';
 
 
 const Router = () => {
@@ -11,6 +12,7 @@ const Router = () => {
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/blogs' component={BlogList} />
+                <Route exact path='/blogform' component={BlogForm} />
             </Switch>
         </div>
     );
