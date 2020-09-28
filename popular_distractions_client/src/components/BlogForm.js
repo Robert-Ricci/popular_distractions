@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { addBlogs }from '../actions/blogActions.js';
 
 class BlogForm extends Component {
    
@@ -9,9 +12,16 @@ class BlogForm extends Component {
         date: ''
     }
 
+    handleSubmit= e => {
+        const {name, value} = e.target
+        this.setState({
+            [name]:value
+        })
+    }
+
    handleSubmit = e =>{
     e.prevent.default()
-
+    this.props.addBlogs(state)
    }
    
 
@@ -30,7 +40,7 @@ class BlogForm extends Component {
                     <label>Content:</label>
                     <textarea  type='text' value={this.props.content} onChange={this.handleChange} name='content'></textarea>
                     <br/>
-                    
+
                     <input type="submit"></input>
                 </form>
             
@@ -38,4 +48,4 @@ class BlogForm extends Component {
     }
 }
 
-export default BlogForm;
+export default connect(null, {addBlogs})(BlogForm);
