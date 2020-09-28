@@ -8,13 +8,13 @@ import BlogForm from './BlogForm';
 
 const Router = () => {
     return (
-        <div>
+        
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/blogs' component={BlogList} />
                 <Route exact path='/blogform' component={BlogForm} />
             </Switch>
-        </div>
+       
     );
 };
 

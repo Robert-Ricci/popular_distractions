@@ -1,6 +1,6 @@
 import React from 'react';
-import BlogContainer from './BlogContainer.js';
-import Router from './Router.js';
+import BlogContainer from './BlogContainer';
+import Router from './Router';
 
 const App = () => {
     return (
