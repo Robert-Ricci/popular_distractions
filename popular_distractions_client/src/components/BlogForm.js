@@ -9,7 +9,10 @@ class BlogForm extends Component {
         date: ''
     }
 
-   
+   handleSubmit = e =>{
+    e.prevent.default()
+
+   }
    
 
     render() {
@@ -26,7 +29,9 @@ class BlogForm extends Component {
 
                     <label>Content:</label>
                     <textarea  type='text' value={this.props.content} onChange={this.handleChange} name='content'></textarea>
-
+                    <br/>
+                    
+                    <input type="submit"></input>
                 </form>
             
         );
