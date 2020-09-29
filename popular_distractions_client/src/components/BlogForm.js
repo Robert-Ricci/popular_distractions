@@ -21,7 +21,7 @@ class BlogForm extends Component {
 
    handleSubmit = e =>{
     e.prevent.default()
-    this.props.addBlog(state)
+    this.props.addBlog(this.state)
    }
    
 
