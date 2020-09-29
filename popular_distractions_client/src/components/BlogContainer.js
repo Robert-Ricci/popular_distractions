@@ -16,7 +16,7 @@ class BlogContainer extends Component {
         return (
             <div>
                 Popular Distractions
-                <BlogList />    
+                 
             </div>
         );
     }
