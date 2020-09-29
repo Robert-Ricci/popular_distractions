@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchBlogs } from '../actions/blogActions';
+import BlogList from './BlogList';
 
 class BlogContainer extends Component {
 
@@ -15,7 +16,7 @@ class BlogContainer extends Component {
         return (
             <div>
                 Popular Distractions
-                
+                <BlogList />    
             </div>
         );
     }
