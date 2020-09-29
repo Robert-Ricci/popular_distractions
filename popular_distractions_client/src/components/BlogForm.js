@@ -9,7 +9,7 @@ class BlogForm extends Component {
         author: '',
         title: '',
         content: '',
-        date: ''
+        date: new Date().toLocaleString()
     }
 
     handleChange = e => {
@@ -21,7 +21,7 @@ class BlogForm extends Component {
 
    handleSubmit = e =>{
     e.prevent.default()
-    this.props.addBlog()
+    this.props.addBlog(state)
    }
    
 
