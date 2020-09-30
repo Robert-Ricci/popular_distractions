@@ -8,7 +8,7 @@ export const fetchBlogs = () => {
 
 export const addBlog = (blog) =>{
     return dispatch =>{
-        fetch('127.0.0.1:3000/blogs', {
+        fetch('http://localhost:3000/blogs', {
             method:'POST',
             body: JSON.stringify(blog),
             headers:{'Content-Type': 'application/json'}
