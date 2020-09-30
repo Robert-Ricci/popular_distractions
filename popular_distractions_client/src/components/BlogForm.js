@@ -9,7 +9,7 @@ class BlogForm extends Component {
         author: '',
         title: '',
         content: '',
-        date: new Date().toLocaleString()
+        date: ''
     }
 
     handleChange = e => {
@@ -42,6 +42,10 @@ class BlogForm extends Component {
                     <textarea type='text' value={this.state.content} onChange={event => this.handleChange(event)} name='content' />
                     <br/>
 
+                    <label>Date:</label>
+                    <input type='text' value={this.state.date} onChange={event => this.handleChange(event)} name='date' />
+                    <br />
+
                     <input type="submit"  value="submit" />
                 </form>
             
@@ -50,3 +54,5 @@ class BlogForm extends Component {
 }
 
 export default connect(null, {addBlog})(BlogForm);
+
+// new Date().toLocaleString()
