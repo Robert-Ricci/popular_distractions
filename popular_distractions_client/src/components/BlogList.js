@@ -5,9 +5,10 @@ const BlogList = ({ blogs }) => {
     return (
         <div>
             <h1>Blog List:</h1>
+            {console.log('blog', blogs)}
             {blogs.map((blog, index) => 
-                <ul>
-                    <li key={index}>
+                <ul key={index}>
+                    <li >
                         {blog.title}-{blog.author}
                     </li>
                 </ul>

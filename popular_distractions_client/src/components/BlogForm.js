@@ -29,7 +29,7 @@ class BlogForm extends Component {
         console.log(this.state)
         return (
             
-                <form onSubmit={event =>this.handleSubmit(event)}>
+                <form onSubmit={event => this.handleSubmit(event)}>
                     <label>Author Name:</label>
                     <input type='text' value={this.state.author} onChange={event => this.handleChange(event)} name='author' />
                     <br />
