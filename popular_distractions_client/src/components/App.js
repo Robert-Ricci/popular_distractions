@@ -1,12 +1,15 @@
 import React from 'react';
 import BlogContainer from './BlogContainer';
 import Router from './Router';
+import NavBar from './NavBar';
 
 const App = () => {
     return (
         <div>
-            <BlogContainer />
+            <NavBar />
             <Router/>
+            <BlogContainer />
+           
         </div>
     );
 };

@@ -15,7 +15,7 @@ class BlogContainer extends Component {
     render() {
         return (
             <div>
-                Popular Distractions
+                
                  
             </div>
         );
