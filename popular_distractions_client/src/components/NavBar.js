@@ -30,6 +30,14 @@ class NavBar extends Component {
                   background: 'darkblue'
                     }}
         >Blogs</NavLink>
+        <NavLink
+                  to="/blogform"
+                  exact
+                  style={link}
+                  activeStyle={{
+                  background: 'darkblue'
+                    }}
+        >Blog Form</NavLink>
             </div>
         );
     }
