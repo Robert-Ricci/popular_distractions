@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const BlogList = ({ blogs }) => {
     return (
@@ -9,7 +10,7 @@ const BlogList = ({ blogs }) => {
             {blogs.map((blog, index) => 
                 <ul key={index}>
                     <li >
-                        {blog.title}-{blog.author}
+                     < Link to='/blogshow'>{blog.title}-{blog.author}</Link>   
                     </li>
                 </ul>
             )}
@@ -22,3 +23,20 @@ const mapStateToProps = state =>{
 }
 
 export default connect(mapStateToProps)(BlogList);
+
+
+// const renderBlogs = Object.keys(blogs).map(blogID =>
+//     <Link key={blogID} to={`/blogs/${blogID}`}>{blogs[blogID].title}</Link>
+//   );
+ 
+//   return (
+//     <div>
+        
+//         <ul>
+//         <br />
+//         <li>{renderBlogs}</li>
+//         </ul>
+      
+//     </div>
+//   );
+// };

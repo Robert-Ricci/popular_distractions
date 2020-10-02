@@ -5,6 +5,7 @@ import BlogList from './BlogList';
 import Home from './Home';
 import BlogForm from './BlogForm';
 import About from './About';
+import BlogShow from './BlogShow';
 
 
 const Router = () => {
@@ -14,6 +15,7 @@ const Router = () => {
                 <Route exact path='/' component={Home} />
                 <Route exact path='/blogs' component={BlogList} />
                 <Route exact path='/blogform' component={BlogForm} />
+                <Route exact path='/blogshow' component={BlogShow} />
                 <Route exact path='/about' component={About} />
             </Switch>
        
