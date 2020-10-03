@@ -1,18 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const BlogShow = ({ blogs }) => {
+const BlogShow = ( {blogs, match} ) => {
+    if(blogs.length === 0) return null 
+    const blog = blogs.find((e) => e.id === parseInt(match.params.id))
+
+    console.log(blog)
     return (
         <div>
-            {blogs.map((blog, index) => 
-                <ul key={index}>
-                    <li >
-                     <h1>{blog.title}</h1>
-                     <p>{blog.content}</p>
-                     <h3>{blog.author} </h3>
-                    </li>
-                </ul>
-            )}
+           <h1>{blog.title}</h1>
+           <p>{blog.content}</p>
+           <h3>{blog.author}</h3>
         </div>
     );
 };
@@ -20,4 +18,5 @@ const BlogShow = ({ blogs }) => {
 const mapStateToProps = state =>{
     return {blogs:state.blogs}
 }
+
 export default connect(mapStateToProps)(BlogShow);

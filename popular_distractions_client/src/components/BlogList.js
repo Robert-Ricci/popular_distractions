@@ -7,10 +7,10 @@ const BlogList = ({ blogs }) => {
         <div>
             <h1>Blog List:</h1>
             {console.log('blog', blogs)}
-            {blogs.map((blog, index) => 
-                <ul key={index}>
+            {blogs.map((blog) => 
+                <ul key={blog.id}>
                     <li >
-                     < Link to='/blogshow'>{blog.title}-{blog.author}</Link>   
+                     < Link key={blog.id} to={`/blogshow/${blog.id}`}>{blog.title}-{blog.author}</Link>   
                     </li>
                 </ul>
             )}
