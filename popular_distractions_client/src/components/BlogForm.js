@@ -34,7 +34,7 @@ class BlogForm extends Component {
     render() {  
         return (
            
-                <form onSubmit={event => this.handleSubmit(event)}>
+                <form className="blog-form" onSubmit={event => this.handleSubmit(event)}>
                     <br />
                     <label>Author Name:</label>
                     <input type='text' value={this.state.author} onChange={event => this.handleChange(event)} name='author' />
