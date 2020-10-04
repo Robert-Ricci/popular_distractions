@@ -22,12 +22,16 @@ class BlogForm extends Component {
    handleSubmit = e =>{
     e.preventDefault()
     this.props.addBlog(this.state)
+    this.setState({
+        author:'',
+        title:'',
+        content:'',
+        date:''
+      })
    }
    
 
-    render() {
-        console.log(this.state)
-        
+    render() {  
         return (
            
                 <form onSubmit={event => this.handleSubmit(event)}>
