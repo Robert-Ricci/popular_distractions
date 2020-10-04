@@ -8,12 +8,13 @@ const link = {
     background: 'blue',
     textDecoration: 'none',
     color: 'white',
+    
   }
 
 class NavBar extends Component {
     render() {
         return (
-            <div>
+            <div className="navbar">
                  <NavLink
           to="/"
           exact
