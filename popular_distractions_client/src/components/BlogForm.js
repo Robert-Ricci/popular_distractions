@@ -36,22 +36,22 @@ class BlogForm extends Component {
            
                 <form className="blog-form" onSubmit={event => this.handleSubmit(event)}>
                     <br />
-                    <label>Author Name:</label>
+                    <label>Author Name:</label><br />
                     <input type='text' value={this.state.author} onChange={event => this.handleChange(event)} name='author' />
                     <br />
 
-                    <label>Title:</label>
+                    <label>Title:</label><br />
                     <input type='text' value={this.state.title} onChange={event => this.handleChange(event)} name='title' />
                     <br />
 
-                    <label>Content:</label>
+                    <label>Content:</label><br />
                     <textarea type='text' value={this.state.content} onChange={event => this.handleChange(event)} name='content' rows={25} cols={100} />
                     <br/>
 
-                    <label>Date:</label>
+                    <label>Date:</label><br />
                     <input type='text' value={this.state.date} onChange={event => this.handleChange(event)} name='date' />
                     <br />
-
+                    <br />
                     <input type="submit"  value="submit" />
                 </form>
             
