@@ -7,6 +7,7 @@ body {
     padding: 40px;
     font-family: Arial;
     text-align: left;
+    
   }
 
   .blog-form {
@@ -15,25 +16,21 @@ body {
 
   .navbar{
     font-size: 30px;
+    
     text-align: center;
   }
 
   .about {
+    margin: 50px;
     font-size: 30px;
   }
 
   .home {
+    margin: 50px;
     color: black;
     text-align: center;
   }
 
-  // .home {
-  //   font-size: 30px;
-  //   text-align: center;
-  //   width: '310px';
-  //   padding: '12px';
-  //   margin: '0 6px 6px';
-  //   background: 'blue';
-  //   // textDecoration: 'none';
-  //   color: 'white',
-  // }
+  .blog-form {
+    margin: 50px;
+  }
