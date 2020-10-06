@@ -15,6 +15,7 @@ export const addBlog = (blog) =>{
         })
         .then(resp => resp.json())
         .then(blog => dispatch({type: 'ADD_BLOG', payload:blog}))
+        window.location.href = "http://localhost:3001/blogs"
     }
 }
 
