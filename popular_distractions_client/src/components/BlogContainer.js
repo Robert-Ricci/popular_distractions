@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-
-// import BlogForm from './BlogForm';
 import { connect } from 'react-redux';
+import {fetchBlogs, deleteBlog} from '../actions/blogActions';
 
-import { fetchBlogs } from '../actions/blogActions';
-// import NavBar from './NavBar';
-// import BlogList from './BlogList';
 
 class BlogContainer extends Component {
 
@@ -23,4 +19,11 @@ class BlogContainer extends Component {
     }
 }
 
-export default connect (null, {fetchBlogs}) (BlogContainer);
+// const mapDispatchToProps = dispatch => {
+//     return {
+//       addBlog: text => dispatch( { type: fetchBlogs, text }), 
+//       delete: id => dispatch(deleteBlog(id))
+//     }
+//   }
+   
+export default connect (null, { fetchBlogs, deleteBlog }) (BlogContainer);

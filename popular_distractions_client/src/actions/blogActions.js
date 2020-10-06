@@ -17,3 +17,13 @@ export const addBlog = (blog) =>{
         .then(blog => dispatch({type: 'ADD_BLOG', payload:blog}))
     }
 }
+
+export const deleteBlog = (id) => {
+    return dispatch => {
+        dispatch({type: 'DELETE_BLOG', payload:id})
+        fetch(`http://localhost:3000/blogs/${id}`, {
+            method: 'DELETE'
+          })
+          window.location.href = "http://localhost:3001/blogs"
+    }
+}

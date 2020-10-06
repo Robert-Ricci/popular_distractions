@@ -2,9 +2,13 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div>
+        <div className="home">
             <br />
-            Welcome Home
+            <h1> 
+                Welcome to Popular Distractions!
+            </h1>
+
+            <h2>The premier place to get distracted</h2>
         </div>
     );
 };
