@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink }from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const link = {
     width: '310px',
@@ -17,13 +17,12 @@ class NavBar extends Component {
     render() {
         return (
             <div className="navbar">
-          <NavLink
-          to="/"
-          exact
-          style={link}
-          FontAwesomeIcon icon="home" 
-          activeStyle={{
-            background: 'darkblue'
+                <NavLink
+                  to="/"
+                  exact
+                  style={link}
+                  activeStyle={{
+                  background: 'darkblue'
           }}
         >Home</NavLink>
         

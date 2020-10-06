@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import App from './components/App';
 import { rootReducer } from './reducers/rootReducer';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore(
     rootReducer, 
