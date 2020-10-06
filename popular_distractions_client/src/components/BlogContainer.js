@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {fetchBlogs, deleteBlog} from '../actions/blogActions';
+import { fetchBlogs } from '../actions/blogActions';
 
 
 class BlogContainer extends Component {
@@ -19,11 +19,6 @@ class BlogContainer extends Component {
     }
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//       addBlog: text => dispatch( { type: fetchBlogs, text }), 
-//       delete: id => dispatch(deleteBlog(id))
-//     }
-//   }
+
    
-export default connect (null, { fetchBlogs, deleteBlog }) (BlogContainer);
+export default connect (null, { fetchBlogs }) (BlogContainer);

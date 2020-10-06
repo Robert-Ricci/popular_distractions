@@ -45,7 +45,7 @@ class BlogForm extends Component {
                     <br />
 
                     <label>Content:</label><br />
-                    <textarea type='text' value={this.state.content} onChange={event => this.handleChange(event)} name='content' rows={25} cols={100} />
+                    <textarea type='text' value={this.state.content} onChange={event => this.handleChange(event)} name='content' rows={25} cols={100} wrap="hard" />
                     <br/>
 
                     <label>Date:</label><br />
