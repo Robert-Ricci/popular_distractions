@@ -7,10 +7,11 @@ export const fetchBlogs = () => {
 }
 
 export const fetchBlog = (id) => {
+    debugger;
     return dispatch => {
         fetch(`http://localhost:3000/blogs/${id}` )
         .then(resp => resp.json())
-        .then(blog => dispatch({ type: 'FETCH_BLOG', payload: blog}))
+        .then(blog => console.log('action', blog))
     }
 }
 

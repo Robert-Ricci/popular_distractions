@@ -3,7 +3,8 @@ export const blogsReducer = (state = [], action) => {
         case 'FETCH_BLOGS':
             return action.payload
         case 'FETCH_BLOG':
-            return [...state, action.payload]
+            console.log(action.payload)
+            return action.payload
         case 'ADD_BLOG':
             return [...state, action.payload]
         case 'UPDATE_BLOG':

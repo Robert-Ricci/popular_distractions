@@ -12,13 +12,22 @@ class Update extends Component {
         date: ''
     }
         
-    // blog = blogs.find((e) => e.id === parseInt(match.params.id))
-
     componentDidMount(){
-        console.log("mount", this.props.match.params.id
-        )
-        fetchBlog(this.props.match.params.id)
-        
+        this.findBlog()
+    }
+
+    findBlog = () => {
+        // console.log("mount", this.props
+        // )
+       console.log(this.props)
+        const blog = this.props.blogs.find(blog => blog.id === parseInt(this.props.match.params.id))
+       
+        // this.setState({
+        //     author: blog.author,
+        //     title: blog.title,
+        //     content: blog.content,
+        //     date: blog.date
+        // })
     }
 
     handleChange = e => {
@@ -41,8 +50,9 @@ class Update extends Component {
    
 
     render() {  
+ 
         return (
-           
+                
                 <form className="blog-form" onSubmit={event => this.handleSubmit(event)}>
                     <br />
                     <label>Author Name:</label><br />
@@ -71,6 +81,7 @@ class Update extends Component {
 const mapStateToProps = state =>{
     return {blogs: state.blogs}
 }
+
 export default connect(mapStateToProps, { fetchBlog, updateBlog})(Update);
 
 // new Date().toLocaleString()
