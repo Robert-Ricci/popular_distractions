@@ -4,7 +4,7 @@ import Router from './Router';
 
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { faHome } from '@fortawesome/free-solid-svg-icons'
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {Navbar, Nav} from 'react-bootstrap';
 import './style.scss';
 
 // library.add(faHome)
