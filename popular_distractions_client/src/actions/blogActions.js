@@ -6,6 +6,13 @@ export const fetchBlogs = () => {
     }
 }
 
+export const fetchBlog = (id) => {
+    return dispatch => {
+        fetch('http://localhost:3000/blogs/' + id)
+        .then(resp => resp.json())
+        .then(blogs => dispatch({ type: 'FETCH_BLOG', payload: blogs}))
+    }
+}
 export const addBlog = (blog) =>{
     return dispatch =>{
         fetch('http://localhost:3000/blogs', {
