@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteBlog } from '../actions/blogActions';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/button';
 
 
 const BlogShow = ( {blogs, match, id, deleteBlog} ) => {
 
     const handleClick = (id) => {
-        console.log('label',id)
         deleteBlog(id)
     }
 
@@ -14,13 +15,13 @@ const BlogShow = ( {blogs, match, id, deleteBlog} ) => {
 
     const blog = blogs.find((e) => e.id === parseInt(match.params.id))
 
-    
     return (
         <div className ="blogs">
            <h1>{blog.title}</h1>
            <p>{blog.content}</p>
            <h3>{blog.author}</h3>
-           <button onClick={() => handleClick(blog.id)}>Delete</button>
+         <Button onClick={() => handleClick(blog.id)}> Delete </ Button>
+          <Button> <Link to={`/blogform/update/${blog.id}`} >Update</Link></Button>
         </div>
     );
 };
@@ -33,4 +34,4 @@ const mapStateToProps = state =>{
 
 
 
-export default connect(mapStateToProps, {deleteBlog})(BlogShow);
+export default connect(mapStateToProps, { deleteBlog })(BlogShow);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import { addBlog } from '../actions/blogActions';
+// import BlogShow from './BlogShow'
+import { fetchBlog, updateBlog } from '../actions/blogActions';
 
 class Update extends Component {
    
@@ -11,10 +11,16 @@ class Update extends Component {
         content: '',
         date: ''
     }
+        
+    // blog = blogs.find((e) => e.id === parseInt(match.params.id))
 
     componentDidMount(){
-        console.log("test")
+        console.log("mount", this.props.match.params.id
+        )
+        fetchBlog(this.props.match.params.id)
+        
     }
+
     handleChange = e => {
         const { name, value } = e.target
         this.setState({
@@ -24,13 +30,13 @@ class Update extends Component {
 
    handleSubmit = e =>{
     e.preventDefault()
-    this.props.addBlog(this.state)
-    this.setState({
-        author:'',
-        title:'',
-        content:'',
-        date:''
-      })
+    this.props.updateBlog(this.state)
+    // this.setState({
+    //     author:'',
+    //     title:'',
+    //     content:'',
+    //     date:''
+    //   })
    }
    
 
@@ -62,6 +68,9 @@ class Update extends Component {
     }
 }
 
-export default connect(null, {addBlog})(Update);
+const mapStateToProps = state =>{
+    return {blogs: state.blogs}
+}
+export default connect(mapStateToProps, { fetchBlog, updateBlog})(Update);
 
 // new Date().toLocaleString()

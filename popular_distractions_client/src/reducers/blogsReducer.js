@@ -3,8 +3,10 @@ export const blogsReducer = (state = [], action) => {
         case 'FETCH_BLOGS':
             return action.payload
         case 'FETCH_BLOG':
-            return action.payload
+            return [...state, action.payload]
         case 'ADD_BLOG':
+            return [...state, action.payload]
+        case 'UPDATE_BLOG':
             return [...state, action.payload]
         case 'DELETE_BLOG':
             const blogs =  state.filter(blog => blog.id !== action.payload)
