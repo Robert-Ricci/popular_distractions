@@ -17,9 +17,9 @@ class Update extends Component {
     }
 
     findBlog = () => {
-        // console.log("mount", this.props
-        // )
-       console.log(this.props)
+        console.log("mount", this.props
+        )
+      
         const blog = this.props.blogs.find(blog => blog.id === parseInt(this.props.match.params.id))
        
         // this.setState({
@@ -29,6 +29,8 @@ class Update extends Component {
         //     date: blog.date
         // })
     }
+
+  
 
     handleChange = e => {
         const { name, value } = e.target
@@ -50,7 +52,7 @@ class Update extends Component {
    
 
     render() {  
- 
+        // console.log(this.props.match.params.id)
         return (
                 
                 <form className="blog-form" onSubmit={event => this.handleSubmit(event)}>
