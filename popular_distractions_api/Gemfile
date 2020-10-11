@@ -24,6 +24,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 #Used for API
 gem "http"
+# gem "scraper_api"
 
 gem 'json', '~> 2.3', '>= 2.3.1'
 

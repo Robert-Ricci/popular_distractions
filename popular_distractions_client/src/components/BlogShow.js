@@ -21,7 +21,7 @@ const BlogShow = ( {blogs, match, id, deleteBlog} ) => {
            <p>{blog.content}</p>
            <h3>{blog.author}</h3>
          <Button onClick={() => handleClick(blog.id)}> Delete </ Button>
-          <Button> <Link to={`/blogform/update/${blog.id}`} >Update</Link></Button>
+          {/* <Button> <Link to={`/blogform/update/${blog.id}`} >Update</Link></Button> */}
         </div>
     );
 };
