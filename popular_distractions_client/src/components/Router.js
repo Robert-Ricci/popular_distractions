@@ -5,6 +5,7 @@ import BlogList from './BlogList';
 import Home from './Home';
 import BlogForm from './BlogForm';
 import About from './About';
+import Contact from './Contact';
 import BlogShow from './BlogShow'
 import Update from './Update';
 
@@ -19,6 +20,7 @@ const Router = () => {
                 <Route exact path='/blogform/update/:id' render={props => <Update {...props}/>} />
                 <Route exact path='/blogshow/:id' render={props => <BlogShow {...props}/>} />
                 <Route exact path='/about' component={About} />
+                <Route exact path='/contact' component={Contact} />
             </Switch>
        
     );

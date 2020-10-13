@@ -20,7 +20,7 @@ class Update extends Component {
         console.log("mount", this.props
         )
       
-        const blog = this.props.blogs.find(blog => blog.id === parseInt(this.props.match.params.id))
+        // const blog = this.props.blogs.find(blog => blog.id === parseInt(this.props.match.params.id))
        
         // this.setState({
         //     author: blog.author,
@@ -86,4 +86,3 @@ const mapStateToProps = state =>{
 
 export default connect(mapStateToProps, { fetchBlog, updateBlog})(Update);
 
-// new Date().toLocaleString()

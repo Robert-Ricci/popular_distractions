@@ -60,5 +60,3 @@ class BlogForm extends Component {
 }
 
 export default connect(null, {addBlog})(BlogForm);
-
-// new Date().toLocaleString()

@@ -25,18 +25,3 @@ const mapStateToProps = state =>{
 export default connect(mapStateToProps)(BlogList);
 
 
-// const renderBlogs = Object.keys(blogs).map(blogID =>
-//     <Link key={blogID} to={`/blogs/${blogID}`}>{blogs[blogID].title}</Link>
-//   );
- 
-//   return (
-//     <div>
-        
-//         <ul>
-//         <br />
-//         <li>{renderBlogs}</li>
-//         </ul>
-      
-//     </div>
-//   );
-// };
