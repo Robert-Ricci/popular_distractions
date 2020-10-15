@@ -49,7 +49,7 @@ class BlogForm extends Component {
                     <br/>
 
                     <label>Date:</label><br />
-                    <input type='text' value={this.state.date} onChange={event => this.handleChange(event)} name='date' />
+                    <input type='date' value={this.state.date} onChange={event => this.handleChange(event)} name='date' />
                     <br />
                     <br />
                     <input type="submit"  value="submit" />
