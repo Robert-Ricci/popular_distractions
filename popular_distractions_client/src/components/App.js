@@ -22,7 +22,7 @@ const App = () => {
                 </Nav>
   </Navbar.Collapse>
 </Navbar>
-            <Navbar/>
+            
             <Router/>
             <BlogContainer />
            

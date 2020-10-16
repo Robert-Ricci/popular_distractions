@@ -6,7 +6,6 @@ const BlogList = ({ blogs }) => {
     return (
         <div className ="blog-list">
             <h1>Blog List:</h1>
-            {console.log('blog', blogs)}
             {blogs.map((blog) => 
                 <ul key={blog.id}>
                     <li >
