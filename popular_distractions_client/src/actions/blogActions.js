@@ -16,14 +16,19 @@ export const fetchBlog = (id) => {
 
 export const addBlog = (blog) =>{
     return dispatch =>{
+        console.log('c')
         fetch('http://localhost:3000/blogs', {
             method:'POST',
             body: JSON.stringify(blog),
             headers:{'Content-Type': 'application/json'}
         })
         .then(resp => resp.json())
-        .then(blog => dispatch({type: 'ADD_BLOG', payload:blog}))
-        window.location.href = "http://localhost:3001/blogs"
+        .then(blog => {
+            console.log('d')
+            dispatch({type: 'ADD_BLOG', payload:blog})
+            window.location.href = "http://localhost:3001/blogs"
+        })
+        
     }
 }
 

@@ -12,6 +12,7 @@ export const blogsReducer = (state = [], action) => {
         case 'DELETE_BLOG':
             const blogs =  state.filter(blog => blog.id !== action.payload)
             return  [...state, blogs ];
+          
         default:
             return state
     }

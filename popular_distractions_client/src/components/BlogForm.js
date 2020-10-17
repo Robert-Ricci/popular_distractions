@@ -20,8 +20,10 @@ class BlogForm extends Component {
     }
 
    handleSubmit = e =>{
+       console.log('a')
     e.preventDefault()
     this.props.addBlog(this.state)
+    console.log('b')
     this.setState({
         author:'',
         title:'',
