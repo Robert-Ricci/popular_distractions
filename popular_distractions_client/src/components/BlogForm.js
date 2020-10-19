@@ -10,6 +10,7 @@ class BlogForm extends Component {
         title: '',
         content: '',
         date: ''
+       
     }
 
     handleChange = e => {
@@ -20,7 +21,8 @@ class BlogForm extends Component {
     }
 
    handleSubmit = e =>{
-       console.log('a')
+       console.log(this.state)
+       
     e.preventDefault()
     this.props.addBlog(this.state)
     console.log('b')
@@ -29,6 +31,7 @@ class BlogForm extends Component {
         title:'',
         content:'',
         date:''
+       
       })
    }
    
