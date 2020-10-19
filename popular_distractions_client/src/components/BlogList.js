@@ -13,7 +13,7 @@ const BlogList = ({ blogs }) => {
             {blogs.map((blog) => 
                 <ul key={blog.id} >
                     <li>
-                     < Link to={`/blogshow/${blog.id}`}>{blog.title}-{blog.author}-{blog.context}</Link>   
+                     < Link to={`/blogshow/${blog.id}`}>{blog.title}-{blog.author}</Link>   
                      <CountButton blogId = {blog.id} />
                     </li>
                 </ul>
