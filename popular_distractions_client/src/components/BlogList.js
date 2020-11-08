@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import React from 'react';
-import CountButton from './CountButton'
+// import CountButton from './CountButton'
 
 const BlogList = ({ blogs }) => {
     
@@ -14,7 +14,7 @@ const BlogList = ({ blogs }) => {
                 <ul key={blog.id} >
                     <li>
                      < Link to={`/blogshow/${blog.id}`}>{blog.title}-{blog.author}</Link>   
-                     <CountButton blogId = {blog.id} />
+                     {/* <CountButton blogId = {blog.id} /> */}
                     </li>
                 </ul>
             )}
